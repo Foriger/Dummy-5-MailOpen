@@ -10,10 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button {
+                let url = URL(string: "mailto://")!
+                UIApplication.shared.open(url)
+            } label: {
+                Text("Open default mail app")
+            }
+
         }
         .padding()
     }
